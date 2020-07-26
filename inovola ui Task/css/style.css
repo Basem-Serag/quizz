@@ -1,3 +1,4 @@
+html,
 body {
     overflow-x: hidden;
 }
@@ -50,20 +51,12 @@ body {
 /* End Framework */
 
 
-body {
-    height: 4000px;
-}
-
-.scrolling {
-    background-color: rgba(0, 0, 0, .5);
-}
-
 /* Start Upper-bar */
 .upper-bar {
-    padding-right: 80px;
-    padding-top: 30px;
-    position: fixed;
+    position: absolute;
     color: #3d2514;
+    top: 3%;
+    right: 6%;
 }
 
 /* End Upper-bar */
@@ -82,16 +75,22 @@ body {
     z-index: 100;
 }
 
+
+.navbar-toggler-icon {
+    background-image: url('../imgs/hamburger-toggler.png');
+}
+
 .navbar-brand .logo {
     height: 50px;
     padding-left: 30px;
 
 }
 
-nav.black {
-    background: #bebebe8e;
+nav.bg {
+    background: #FFF;
     height: 80px;
-    padding: 10px 50px;
+    padding: 5px 10px;
+    box-shadow: 0px 1px 10px #3d2514;
 }
 
 
@@ -107,26 +106,66 @@ nav.black {
     letter-spacing: 3px;
 }
 
+.nav-link:hover {
+    color: #3d251462;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .navbar-brand .logo {
         height: 40px;
     }
+
+    .navbar-nav {
+        background-color: #fff;
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        text-align: center;
+    }
+
+
 }
 
-@media (min-width: 768px) and (max-width: 991.98px) {
-    .navbar-expand-md .navbar-nav .nav-link {
-        padding: 0;
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar {
+        padding-right: 0;
+        left: 0;
     }
 
-    .nav-item {
-        padding-right: 20px;
+    .navbar-nav {
+        background-color: transparent !important;
     }
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px)  {
+    .navbar-brand .logo {
+        height: 40px;
+    }
+
+    .navbar-nav {
+        background-color: #fff;
+        width: 100%;
+        display: block;
+        position: absolute;
+        left: 0;
+        text-align: center;
+    }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .nav-item {
         padding-right: 35px;
+    }
+
+    .navbar-nav {
+        background-color: transparent !important;
     }
 
 }
@@ -142,7 +181,6 @@ header {
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
 
-    html,
     body {
         overflow-x: hidden;
     }
@@ -451,9 +489,6 @@ header {
     .offer-img-2 {
         padding-bottom: 22px;
     }
-
-
-
 }
 
 /* End offer section */
@@ -517,13 +552,32 @@ header {
     margin-top: 20px;
 }
 
+.card-body .btn:hover {
+    background-color: #ffffff;
+    color: #bf2222;
+    -webkit-box-shadow: 0 .1em 1em;
+    -moz-box-shadow: 0 .1em 1em;
+    -o-box-shadow: 0 .1em 1em;
+    box-shadow: 0 .1em 1em;
+
+}
+
+.card-body .btn:focus {
+    background-color: #bf2222;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+}
+
+
 .custom-shadow {
     width: 450px;
     display: block;
     margin: 0 -60px;
     height: auto;
 }
-
+/* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .menu h1 {
         font-size: 35px;
@@ -878,6 +932,7 @@ header {
 
 }
 
+/* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .owl-carousel h2 {
         font-size: 25px;
@@ -896,11 +951,12 @@ header {
     .owl-theme .owl-nav.disabled+.owl-dots {
         margin-top: 0;
         position: absolute;
-        bottom: 10px;
+        bottom: -5px;
         left: 18px;
     }
 }
 
+/* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
 
     .owl-carousel h2 {
@@ -926,6 +982,7 @@ header {
 
 }
 
+/* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .owl-carousel h2 {
         font-size: 25px;
@@ -957,6 +1014,7 @@ header {
 
 }
 
+/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .owl-carousel h2 {
         font-size: 35px;
@@ -1038,6 +1096,9 @@ header {
 
 }
 
+form {
+    padding-top: 70px;
+}
 
 label {
     position: absolute;
@@ -1053,7 +1114,6 @@ label {
 
 }
 
-
 input {
     width: 100%;
     padding: 20px;
@@ -1066,28 +1126,58 @@ input {
 
 }
 
-.active {
+.booking-btn {
+    width: 100%;
+    background-color: #bf2222;
+    display: block;
+    padding: 7px 0;
+    outline: none;
+    border-radius: 0;
+    font-size: 17px;
+    line-height: 38px;
+    color: #ffffff;
+    font-family: alfaslab;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+}
+
+.booking-btn:hover {
+    background-color: #fff;
+    color: #bf2222;
+    -webkit-box-shadow: 0 .1em 1em;
+    -moz-box-shadow: 0 .1em 1em;
+    -o-box-shadow: 0 .1em 1em;
+    box-shadow: 0 .1em 1em;
+}
+
+.booking-btn:focus {
+    background-color: #bf2222;
+    color: #ffffff;
+    outline: none;
+    border: 0;
+    box-shadow: 0;
+}
+
+.booking .active {
     top: -25px;
     font-size: 20px;
 }
 
 
-.form-control:focus {
+.booking .form-control:focus {
     border: 1px solid #bebebe;
     outline: 0;
     box-shadow: none;
 }
 
-.bottle {
+.booking .bottle {
     position: absolute;
     top: 45%;
     left: 5%;
 }
 
-form {
-    padding-top: 70px;
-}
-
+/* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .booking form {
         padding-top: 50px;
@@ -1107,6 +1197,7 @@ form {
     .booking label {
         top: 10px;
         left: 33px;
+
     }
 
     .booking .bottle {
@@ -1128,7 +1219,7 @@ form {
     }
 
 }
-
+/* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .booking form {
         padding-top: 0px;
@@ -1174,6 +1265,7 @@ form {
 
 }
 
+/* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .booking form {
         padding-top: 50px;
@@ -1220,6 +1312,7 @@ form {
 
 }
 
+/* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .booking form {
         padding-top: 0px;
@@ -1266,6 +1359,7 @@ form {
 
 }
 
+/* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
     .booking {
         position: relative;
@@ -1372,3 +1466,278 @@ form {
 
 
 }
+
+/* Start Contact-Us Section */
+.contact-us {
+    background: url('../imgs/contact-us-bg.png') no-repeat left / cover;
+    height: 100vh;
+    position: relative;
+    margin-top: 10rem;
+}
+
+.logo-wrapper {
+    top: 200px;
+    left: 50px;
+    position: absolute;
+}
+
+.logo-wrapper img {
+    width: 50%;
+    height: auto;
+}
+
+.fa-map-marker-alt,
+.fa-envelope {
+    font-size: 30px;
+    padding-bottom: 20px;
+}
+
+.logo-wrapper .lead {
+    line-height: 25px;
+    color: #ffffff;
+    font-weight: 400;
+    font-family: montserrat;
+    height: 106px;
+    font-size: 17px;
+    width: 520px;
+    padding-top: 50px;
+}
+
+.location-wrapper {
+    top: 300px;
+    left: 280px;
+    position: absolute;
+
+}
+
+.location-wrapper .location-title {
+    font-size: 21px;
+    color: #ffffff;
+    font-family: bebas;
+    vertical-align: middle;
+    padding-left: 20px;
+    font-weight: 100;
+}
+
+.copyright-title {
+    position: absolute;
+    top: 580px;
+    color: #fff;
+    left: 50px;
+}
+
+.social-wrapper {
+    position: absolute;
+    top: 570px;
+    left: 280px;
+}
+
+.social-media-link--facebook:before {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 49%, #5F7AAE 50%);
+}
+
+.social-media-link--twitter:before {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 49%, #5AC2F0 50%);
+}
+
+.social-media-link--instagram:before {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 49%, #e1306c 50%);
+}
+
+.social-media-link--linkedin:before {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 49%, #4390B5 50%);
+}
+
+.social-media-link--whatsapp:before {
+    background-image: linear-gradient(45deg, #ffffff 0%, #ffffff 49%, #25d366 50%);
+}
+
+.social-media-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.social-media-link {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none !important;
+    color: #3d3d3d;
+    font-size: 15px;
+    position: relative;
+    transition: transform .50s ease-in-out;
+}
+
+.social-media-link>i {
+    z-index: 1;
+}
+
+.social-media-link:before {
+    width: 30px;
+    height: 30px;
+    border-radius: 70px;
+    content: "";
+    position: absolute;
+    background-size: 300%;
+    background-position: 0% 0%;
+    transition: background-position 0.55s cubic-bezier(0.79, 0.14, 0.15, 0.86);
+}
+
+.social-media-link:hover,
+.social-media-link:active,
+.social-media-link:focus {
+    transform: translateY(-5px);
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.social-media-link:hover:before,
+.social-media-link:active:before,
+.social-media-link:focus:before {
+    background-position: top right;
+}
+
+.social-media-link+.social-media-link {
+    margin-left: 4px;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+
+    .logo-wrapper .lead {
+        line-height: 25px;
+        color: #ffffff;
+        font-weight: 400;
+        font-family: montserrat;
+        height: auto;
+        font-size: 11px;
+        width: 100%;
+        padding-top: 19px;
+    }
+
+    .fa-map-marker-alt,
+    .fa-envelope {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+
+    .location-wrapper {
+        top: 385px;
+        left: 50px;
+        position: absolute;
+    }
+
+    .copyright-title {
+        position: absolute;
+        top: 475px;
+        color: #fff;
+        left: 20px;
+    }
+
+    .social-wrapper {
+        position: absolute;
+        top: 505px;
+        left: 10px;
+    }
+
+
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media  (min-width: 768px) and (max-width: 991.98px) {
+
+
+    .logo-wrapper {
+        top: 333px;
+        left: 50px;
+        position: absolute;
+    }
+
+    .location-wrapper {
+        top: 560px;
+        left: -326px;
+        position: absolute;
+    }
+
+    .copyright-title {
+        position: absolute;
+        top: 808px;
+        color: #fff;
+        left: 50px;
+    }
+
+    .social-wrapper {
+        position: absolute;
+        top: 794px;
+        left: 183px;
+    }
+
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .logo-wrapper {
+        top: 490px;
+        left: 50px;
+        position: absolute;
+    }
+
+    .location-wrapper {
+        top: 560px;
+        left: 175px;
+        position: absolute;
+    }
+
+    .copyright-title {
+        position: absolute;
+        top: 808px;
+        color: #fff;
+        left: 50px;
+    }
+
+    .social-wrapper {
+        position: absolute;
+        top: 794px;
+        left: 183px;
+    }
+
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .logo-wrapper {
+        top: 490px;
+        left: 50px;
+        position: absolute;
+    }
+
+    .location-wrapper {
+        top: 560px;
+        left: 175px;
+        position: absolute;
+    }
+
+    .copyright-title {
+        position: absolute;
+        top: 808px;
+        color: #fff;
+        left: 50px;
+    }
+
+    .social-wrapper {
+        position: absolute;
+        top: 794px;
+        left: 183px;
+    }
+
+
+}
+
+
+/* End Contact-Us Section */
