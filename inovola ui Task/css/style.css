@@ -1,4 +1,3 @@
-html,
 body {
     overflow-x: hidden;
 }
@@ -142,7 +141,7 @@ nav.bg {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) and (max-width: 991.98px)  {
+@media (min-width: 768px) and (max-width: 991.98px) {
     .navbar-brand .logo {
         height: 40px;
     }
@@ -577,6 +576,7 @@ header {
     margin: 0 -60px;
     height: auto;
 }
+
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .menu h1 {
@@ -1219,6 +1219,7 @@ input {
     }
 
 }
+
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .booking form {
@@ -1648,7 +1649,7 @@ input {
 }
 
 /* // Medium devices (tablets, 768px and up) */
-@media  (min-width: 768px) and (max-width: 991.98px) {
+@media (min-width: 768px) and (max-width: 991.98px) {
 
 
     .logo-wrapper {
@@ -1708,36 +1709,5 @@ input {
 
 
 }
-
-/* // Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {
-    .logo-wrapper {
-        top: 490px;
-        left: 50px;
-        position: absolute;
-    }
-
-    .location-wrapper {
-        top: 560px;
-        left: 175px;
-        position: absolute;
-    }
-
-    .copyright-title {
-        position: absolute;
-        top: 808px;
-        color: #fff;
-        left: 50px;
-    }
-
-    .social-wrapper {
-        position: absolute;
-        top: 794px;
-        left: 183px;
-    }
-
-
-}
-
 
 /* End Contact-Us Section */
